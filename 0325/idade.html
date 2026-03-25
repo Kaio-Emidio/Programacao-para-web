@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let idade = prompt(message="Digite a sua idade aqui:")
+        idade = parseInt(idade)
+        
+        if (idade >= 0 && idade < 15) {
+            document.writeln("Criança")
+        } else if (idade >= 15 && idade < 30) {
+            document.writeln("Jovem")
+        } else if (idade >= 30 && idade < 60) {
+            document.writeln("Adulto")
+        } else if (idade >= 60) {
+            document.writeln("Idoso")
+        } else {
+            document.writeln("Idade inválida. Insira uma idade que seja um número maior que zero.")
+        }
+    </script>
+</body>
+</html>
