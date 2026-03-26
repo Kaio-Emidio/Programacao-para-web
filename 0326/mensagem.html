@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dados = []
+        dados.push(prompt(message="Qual o seu nome?"))
+        dados.push(prompt(message="Qual a sua cor favorita?"))
+        dados.push(prompt(message="Qual o seu prato favorito?"))
+        dados.push(prompt(message="Qual o seu estilo de música favorito?"))
+
+        document.write(`Olá ${dados[0]}, analisei suas preferências e estou vendo que sua cor preferida 
+                        é ${dados[1]}, seu prato preferido é ${dados[2]} e que você gosta de ouvir ${dados[3]},
+                        agora que já sei de tudo isso, vou selecionar as melhores notícias para
+                        você ler hoje!`)
+    </script>
+</body>
+</html>

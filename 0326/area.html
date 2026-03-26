@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="l" placeholder="Largura"><br>
+    <input type="number" id="c" placeholder="Comprimento"><br>
+    <button type="button" onclick="calcularAreaTerreno()">Calcular área</button><br>
+    Resultado: <span id="resultado"></span>
+
+    <script>
+        function calcularAreaTerreno() {
+            let Largura = parseFloat(document.getElementById('l').value)
+            let Comprimento = parseFloat(document.getElementById('c').value)
+
+            let area = Largura * Comprimento
+
+            let resultado = document.getElementById('resultado')
+            resultado.textContent = area
+        }
+    </script>
+</body>
+</html>
