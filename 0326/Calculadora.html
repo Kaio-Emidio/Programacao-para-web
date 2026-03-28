@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    O resultado é: <span id="resultado"></span>
+    <script>
+            let num1 = parseFloat(prompt(message = "Digite um número:"))
+            let oper = prompt(message = "Digite a operação que deseja realizar (Soma / Subtração):").toLowerCase()
+            let num2 = parseFloat(prompt(message = "Digite um número:"))
+
+            function calc(n1, n2, op) {
+                if (op == "soma") {
+                    re = n1 + n2
+                } else if (op == "subtração") {
+                    re = n1 - n2
+                } else {
+                    re = "Dados inválidos, tente novamente."
+                }
+
+                return re
+            }
+
+            let resultado = calc(num1, num2, oper)
+            let span = document.getElementById('resultado')
+            span.textContent = resultado
+    </script>
+</body>
+</html>
