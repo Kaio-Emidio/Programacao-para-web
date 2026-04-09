@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function criar() {
+            let linhas = parseInt(document.getElementById('linhas').value)
+            let colunas = parseInt(document.getElementById('colunas').value)
+
+            let tabela = document.createElement("table")
+
+            for (i = 0; i < linhas; i++) {
+                let linha = document.createElement("tr")
+                linha.setAttribute("id", 'L' + i)
+                tabela.appendChild(linha)
+
+                for (j = 0; j < colunas; j++) {
+                    let coluna = document.createElement("td")
+                    coluna.setAttribute("id", 'C' + i + j)
+                    coluna.innerHTML = "oi"
+                    linha.appendChild(coluna)
+                }
+            }
+
+            let div = document.getElementById("tabelas")
+            div.appendChild(tabela)
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h3>Linhas</h3>
+        <input type="number" id="linhas">
+        <h3>Colunas</h3>
+        <input type="number" id="colunas"> <br> <br>
+        <button onclick="criar()">Criar</button>
+        <button onclick="limpar()">Limpar</button>
+    </div>
+    <div id="tabelas"></div>
+</body>
+</html>
