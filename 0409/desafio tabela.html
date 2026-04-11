@@ -10,22 +10,37 @@
             let colunas = parseInt(document.getElementById('colunas').value)
 
             let tabela = document.createElement("table")
+            tabela.setAttribute('border', '3')
 
             for (i = 0; i < linhas; i++) {
                 let linha = document.createElement("tr")
-                linha.setAttribute("id", 'L' + i)
+                linha.setAttribute("id", 'l' + i)
                 tabela.appendChild(linha)
 
                 for (j = 0; j < colunas; j++) {
                     let coluna = document.createElement("td")
-                    coluna.setAttribute("id", 'C' + i + j)
-                    coluna.innerHTML = "oi"
+                    coluna.innerHTML = `L: ${i+1} C: ${j+1}`
                     linha.appendChild(coluna)
                 }
+
+                let remover = document.createElement("td")
+                remover.innerHTML = "<button onclick='removerLinha("+i+")'>Remover</button>"
+                linha.appendChild(remover)
             }
 
             let div = document.getElementById("tabelas")
             div.appendChild(tabela)
+        }
+
+        function removerLinha(n) {            
+            let id = '#l'+n
+            let linha = document.querySelector(id)
+            linha.parentNode.removeChild(linha)
+        }
+
+        function limpar() {
+            let tabela = document.querySelector('table')
+            tabela.parentNode.removeChild(tabela)
         }
     </script>
 </head>
