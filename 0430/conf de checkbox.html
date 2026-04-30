@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        let ok = true
+
+        function validar() {
+
+        }
+
+        function nomes() {
+            let casa = $("#casa")
+            let visitante = $("#visitante")
+
+            if (casa.val() === '' || visitante.val() === '') {
+                alert("Os nomes dos times não podem estar vazios!")
+                ok = false
+            }
+        }
+
+        function placar() {
+            let p1 = 
+        }
+
+        function local() {
+
+        }
+
+        function destaque() {
+
+        }
+
+        function termo() {
+
+        }
+    </script>
+    <style>
+        input[type="number"] {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário muintu maneiro</h1>
+    <form>
+        <h2>Nome dos times</h2>
+        <h3>Time da casa</h3>
+        <input type="text" id="casa">
+        <h3>Time visitante</h3>
+        <input type="text" id="visitante">
+        <h2>Placar</h2>
+        <input type="number" id="p1"> x <input type="number" id="p2">
+        <h2>Local da partida</h2>
+        <input type="radio" name="local" id="l1" value="Estádio Principal"> Estádio Principal <br>
+        <input type="radio" name="local" id="l2" value="Campo Secundário"> Campo Secundário <br>
+        <input type="radio" name="local" id="l3" value="Campo do Visitante"> Campo do Visitante<br><br>
+        <h2>Destaques da Partida</h2>
+        <input type="checkbox" name="destaques" id="d1"> Golaço <br>
+        <input type="checkbox" name="destaques" id="d2"> Fair Play <br>
+        <input type="checkbox" name="destaques" id="d3"> Grande Defesa <br>
+        <input type="checkbox" name="destaques" id="d4"> Torcida Animada <br>
+        <h2>Termo de Veracidade</h2>
+        <input type="checkbox" name="veracidade" id="v1"> Eu confirmo que os dados são 100% reais oficiais sem mentir jurado juradinho de pé junto pela minha mãe. <br><br>
+        <input type="submit" value="Enviar" onclick="return validar()">
+    </form>
+</body>
+</html>
