@@ -40,7 +40,8 @@
         function consultarClima(link) {
             $.getJSON(link, function(data) {
                 console.log(data)
-                
+                console.log(data.nearest_area[0].country[0].value)
+                $("#nomeCidade").val()
             })
         }
     })
