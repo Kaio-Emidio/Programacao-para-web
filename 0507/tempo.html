@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulta do Clima</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .weather-card {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+    }
+
+    #resultado {
+      display: none;
+    }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+   <script>
+    $(document).ready(function() {
+        $("#btnPesquisar").on("click", function() {
+            let cidade = $("#cidade").val()
+            let link = "https://wttr.in/" + cidade + "?format=j2"
+            consultarClima(link)
+        })
+        
+        function consultarClima(link) {
+            $.getJSON(link, function(data) {
+                console.log(data)
+                
+            })
+        }
+    })
+  </script>
+</head>
+<body>
+
+  <div class="card shadow-lg p-4 weather-card">
+    <h2 class="text-center mb-4">🌤 Consulta do Clima</h2>
+
+    <form class="input-group mb-3">
+      <input
+        type="text" id="cidade" class="form-control" placeholder="Digite o nome da cidade"/>
+      <input type="button" class="btn btn-primary" value="Pesquisar" id="btnPesquisar">
+    </form>
+
+    <div id="resultado" class="alert alert-info mt-3">
+      <h4 id="nomeCidade"></h4>
+      <p id="condicaoClima" class="mb-0"></p>
+    </div>
+  </div>
+</body>
+</html>
