@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function verificar() {
+            let idade = parseInt($("#idade").val())
+            
+            if (idade >= 18) {
+                $("#resultado").text("Usuário maior de idade!")
+            } else {
+                $("#resultado").text("Usuário menor de idade!")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="idade"> <br> <br>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <h1 id="resultado"></h1>
+</body>
+</html>

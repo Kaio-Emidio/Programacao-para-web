@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 13</title>
+    <script>
+        let numero = 1
+        function adicionar() {
+            let novoli = document.createElement("li")
+            novoli.setAttribute('id', numero)
+            
+            document.getElementById("lista").appendChild(novoli)
+
+            document.getElementById(numero).innerHTML = "Item " + numero
+            numero = numero + 1
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Adicionar Item" onclick="adicionar()">
+    <ul id="lista">
+    </ul>
+</body>
+</html>

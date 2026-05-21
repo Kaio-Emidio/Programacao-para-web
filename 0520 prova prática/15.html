@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 15</title>
+    <script>
+        function trocar () {
+            let imagem = document.querySelector("#imagem").src
+            if (imagem == "https://picsum.photos/id/237/300/200") {
+                document.querySelector("#imagem").src = "https://picsum.photos/id/1025/300/200"
+            } else {
+                document.querySelector("#imagem").src = "https://picsum.photos/id/237/300/200"
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="https://picsum.photos/id/237/300/200" id="imagem"> <br><br>
+    <input type="button" value="Trocar" onclick="trocar()">
+    <!-- <img src="https://picsum.photos/id/1025/300/200"> -->
+</body>
+</html>
