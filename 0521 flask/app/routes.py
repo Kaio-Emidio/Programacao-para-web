@@ -1,5 +1,7 @@
 from app import app
-from flask import render_template
+from flask import render_template, redirect, flash
+from app.forms.login_form import LoginForm
+from app.controllers.AuthenticationController import AuthenticationController
 
 @app.route("/")
 def home():
@@ -35,3 +37,15 @@ def contatos():
         <li>Instagram: @Wolyo_Wolf</li>
         <li>Discord: LobinWolyo</li>
     </ul>"""
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    formulario = LoginForm()
+    if formulario.validate_on_submit():
+        if AuthenticationController.login(formulario):
+            flash('Login efetuado com sucesso.')
+            return redirect('/')
+        else:
+            flash("Erro nas credenciais.")
+            return redirect('/login')
+    return render_template('login.html', title = 'Login', form = formulario)
