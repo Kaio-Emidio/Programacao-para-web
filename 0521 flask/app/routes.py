@@ -1,6 +1,7 @@
 from app import app
 from flask import render_template, redirect, flash
 from app.forms.login_form import LoginForm
+from app.forms.singup_form import SingupForm
 from app.controllers.AuthenticationController import AuthenticationController
 
 @app.route("/")
@@ -49,3 +50,15 @@ def login():
             flash("Erro nas credenciais.")
             return redirect('/login')
     return render_template('login.html', title = 'Login', form = formulario)
+
+@app.route('/cadastro', methods = ['GET', 'POST'])
+def cadastro():
+    formulario = SingupForm()
+    if formulario.validate_on_submit():
+        if AuthenticationController.singup(formulario):
+            flash('Cadastro realizado com sucesso')
+            return redirect('/')
+        else: 
+            flash('Erro nas credenciais')
+            return redirect('/cadastro')
+    return render_template('singup.html', title = 'Cadastro', form = formulario)
