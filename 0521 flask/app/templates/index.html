@@ -2,6 +2,14 @@
 
 {% block titulo %}Página Inicial{% endblock %}
 
+{% block nav %}
+    <p>Conta:</p>
+    <ul>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+    </ul>
+{% endblock %}
+
 {% block conteudo %}
     {% if usuario_logado %}
         <h1>Bem-vindo(a), {{ pessoa.nome }}!</h1>
