@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+nav {
+    margin-bottom: 24px;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #f5f5f5;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+input {
+    box-sizing: border-box;
+    display: block;
+    margin-top: 6px;
+    padding: 8px;
+    width: 100%;
+}
+
+button, .button {
+    background: #1f6feb;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    margin-top: 16px;
+    padding: 9px 14px;
+    text-decoration: none;
+}
+
+.button.secondary {
+    background: #666;
+}
+
+.button.danger, button.danger {
+    background: #b42318;
+}
+
+.messages, .errors {
+    background: #fff4d6;
+    border: 1px solid #f0c36d;
+    padding: 12px 16px;
+}

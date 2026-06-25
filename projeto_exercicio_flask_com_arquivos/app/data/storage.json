@@ -1,0 +1,32 @@
+{
+  "pacientes": [
+    {
+      "nome_completo": "leo",
+      "username": "leosilva",
+      "email": "leo@gmail.com",
+      "criado_em": "2026-06-22T13:29:24",
+      "id": 1
+    },
+    {
+      "nome_completo": "silva",
+      "username": "silvaleo",
+      "email": "sadfasd@gmail.com",
+      "criado_em": "2026-06-22T13:29:58",
+      "id": 2
+    },
+    {
+      "nome_completo": "adsf",
+      "username": "asdfadsf",
+      "email": "leoasdf@gmail.com",
+      "criado_em": "2026-06-22T13:36:15",
+      "id": 3
+    }
+  ],
+  "medicos": [],
+  "consultas": [],
+  "_next_ids": {
+    "pacientes": 4,
+    "medicos": 1,
+    "consultas": 1
+  }
+}

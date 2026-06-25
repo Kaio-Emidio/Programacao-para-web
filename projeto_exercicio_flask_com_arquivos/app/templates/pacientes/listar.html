@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Pacientes</h1>
+
+  <p>
+    <a class="button" href="{{ url_for('criar_paciente') }}">Cadastrar paciente</a>
+  </p>
+
+  {% if pacientes %}
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome completo</th>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for paciente in pacientes %}
+          <tr>
+            <td>{{ paciente.id }}</td>
+            <td>{{ paciente.nome_completo }}</td>
+            <td>{{ paciente.username }}</td>
+            <td>{{ paciente.email }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>Nenhum paciente cadastrado.</p>
+  {% endif %}
+{% endblock %}

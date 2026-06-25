@@ -1,0 +1,1 @@
+from .paciente_controller import PacienteController

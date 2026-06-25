@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  {% if form.errors %}
+    <div class="errors">
+      {% for field_errors in form.errors.values() %}
+        {% for error in field_errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <form method="post">
+    {{ form.hidden_tag() }}
+
+    {{ form.nome_completo.label }}
+    {{ form.nome_completo() }}
+
+    {{ form.username.label }}
+    {{ form.username() }}
+
+    {{ form.email.label }}
+    {{ form.email() }}
+
+    <button type="submit">{{ submit_label }}</button>
+    <a class="button secondary" href="{{ url_for('listar_pacientes') }}">Cancelar</a>
+  </form>
+{% endblock %}
